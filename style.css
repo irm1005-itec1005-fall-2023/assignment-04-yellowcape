@@ -16,6 +16,14 @@
   --colour-wedgewood: #457b9d;
   --colour-cello: #1d3557;
 
+  /* MY COLOUR PALLETTE
+  #f0d7a7 - lightest colour creamy pretty
+  #c37960 - medium most orangy brown
+  #894e3f - darkest brown deep
+  #eee1ba - more greyish verious of 1st colour
+  #9c634f - milk chocolate brown
+  */
+
   /* Header configuration */
   --header-heading-colour: var(--colour-peppermint);
 

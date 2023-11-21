@@ -22,7 +22,7 @@ toDoForm.addEventListener("submit", handleSubmitForm)
 
 // Constants
     const appID = "app";
-    const headingText = "To do. To done. ✅";
+    const headingText = "Let's Get This Bread!";
 
 // DOM Elements
     let appContainer = document.getElementById(appID);
