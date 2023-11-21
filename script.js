@@ -7,17 +7,59 @@
 
 //
 // Variables
+let todoItems = [];
+let counter = 0;
+
+addToDoItem("Make Coffee");
+removeToDoItem(0);
 //
 
 // Constants
-const appID = "app";
-const headingText = "To do. To done. ✅";
+    const appID = "app";
+    const headingText = "To do. To done. ✅";
 
 // DOM Elements
-let appContainer = document.getElementById(appID);
+    let appContainer = document.getElementById(appID);
 
 //
 // Functions
+    function addToDoItem(text) {
+      let todoItem = { 
+        id : counter, 
+        text : text, 
+        completed: false,
+      }
+      todoItems.push(todoItem);
+      counter = counter + 1;
+    }
+
+    
+    function removeToDoItem(todoId) {
+      // Implement the logic to add a task here
+      for (let index = 0; index < todoItems.length; index++) 
+      {
+        if (todoItems[index].id === todoId) 
+        {
+          todoItems.splice(index, 1);
+          break;
+        }
+      }
+    }
+
+
+    function markToDoItemAsCompleted(todoId) {
+      // Implement the logic to mark a task as completed here
+     for (let index = 0; index < todoItems.length; index++) 
+      {
+        if (todoItems[index].id === todoId) 
+        {
+          todoItems[index].completed = true;
+          break;
+        }
+      }
+    }
+    markToDoItemAsCompleted(1);
+    console.log(todoItems[index]);
 //
 
 // Add a heading to the app container
