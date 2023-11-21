@@ -7,12 +7,18 @@
 
 //
 // Variables
-let todoItems = [];
+let toDoItems = [];
 let counter = 0;
+let toDoForm = document.getElementById("todo-form");
+let toDoList = document.getElementById("todo-inputted-items-list");
+let toDoInput = document.getElementById("todo-input");
 
 addToDoItem("Make Coffee");
 removeToDoItem(0);
 //
+
+//Handlding the form submission
+toDoForm.addEventListener("submit", handleSubmitForm)
 
 // Constants
     const appID = "app";
@@ -23,44 +29,91 @@ removeToDoItem(0);
 
 //
 // Functions
+    function handleSubmitForm(event) {
+      event.preventDefault();
+      toDoItems.push(toDoInput.value);
+      toDoForm.reset();
+      renderData();
+    }
+
+      function renderData() {
+        console.log("Render Data", toDoItems);
+        toDoList.innerHTML = "";
+
+        for (let index = 0; index < toDoItems.length; index++) {
+          let tempListItem = document.createElement("li");
+
+          tempListItem.textContent = toDoItems[index];
+
+          let tempButton = document.createElement("button");
+           tempButton.textContent = "Banish Me!";
+           tempButton.dataset.super = index;
+
+            tempButton.addEventListener("click", function(event) {
+              console.log("You clicked me");
+
+              console.log("You clicked on", event.target.dataset.super);
+
+           toDoItems.splice(event.target.dataset.super, 1);
+            renderData();
+              });
+
+          tempListItem.appendChild(tempButton);
+          toDoList.appendChild(tempListItem);
+
+        }
+      }
+
+
     function addToDoItem(text) {
       let todoItem = { 
         id : counter, 
         text : text, 
         completed: false,
       }
-      todoItems.push(todoItem);
+      toDoItems.push(todoItem);
       counter = counter + 1;
-    }
+    } 
 
-    
+
     function removeToDoItem(todoId) {
       // Implement the logic to add a task here
-      for (let index = 0; index < todoItems.length; index++) 
+      for (let index = 0; index < toDoItems.length; index++) 
       {
-        if (todoItems[index].id === todoId) 
+        if (toDoItems[index].id === todoId) 
         {
-          todoItems.splice(index, 1);
+          toDoItems.splice(index, 1);
           break;
         }
       }
     }
 
+// OLD CODE BELOW
 
-    function markToDoItemAsCompleted(todoId) {
-      // Implement the logic to mark a task as completed here
-     for (let index = 0; index < todoItems.length; index++) 
-      {
-        if (todoItems[index].id === todoId) 
-        {
-          todoItems[index].completed = true;
-          break;
-        }
-      }
-    }
-    markToDoItemAsCompleted(1);
-    console.log(todoItems[index]);
-//
+        /*  function markToDoItemAsCompleted(todoId) {
+          for (let index = 0; index < toDoItems.length; index++) 
+            {
+              if (todDoItems[index].id === todoId) 
+              {
+                toDoItems[index].completed = true;
+                break;
+              }
+            }
+          }
+          markToDoItemAsCompleted(1);
+          console.log(toDoItems[index]);
+        
+
+          function clearCompletedTasks() {
+            for (let index = 0; index < toDoItems.length; index++) {
+              if (toDoItems[index].completed === true) {
+                toDoItems.splice(index, 1);
+              }
+            }
+          }
+          */
+
+// END OF OLD CODE
 
 // Add a heading to the app container
 function inititialise() {
