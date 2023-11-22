@@ -7,14 +7,25 @@
 /*
  VARIABLES
 */
-:root {
-  /* Core colours */
-  /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
-  --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
-  --colour-aquaisland: #a8dadc;
-  --colour-wedgewood: #457b9d;
-  --colour-cello: #1d3557;
+
+          /* COMMENTING OUT STYLES
+          :root {
+            Core colours 
+            https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 
+            --colour-amaranth: #e63946;
+            --colour-peppermint: #f1faee;
+            --colour-aquaisland: #a8dadc;
+            --colour-wedgewood: #457b9d;
+            --colour-cello: #1d3557; }
+
+            Header configuration 
+            --header-heading-colour: var(--colour-peppermint);
+
+            Body configuration 
+            --body-default-colour: var(--colour-cello);
+            --body-background-colour: var(--colour-peppermint); */
+
+          
 
   /* MY COLOUR PALLETTE
   #f0d7a7 - lightest colour creamy pretty
@@ -24,13 +35,6 @@
   #9c634f - milk chocolate brown
   */
 
-  /* Header configuration */
-  --header-heading-colour: var(--colour-peppermint);
-
-  /* Body configuration */
-  --body-default-colour: var(--colour-cello);
-  --body-background-colour: var(--colour-peppermint);
-}
 
 /*
   PAGE / BODY
@@ -38,7 +42,8 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
+  background-image: url(images/my-images/bread.png);
+  background-repeat: repeat-x;
 }
 
 main {
