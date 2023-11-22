@@ -22,7 +22,6 @@ toDoForm.addEventListener("submit", handleSubmitForm)
 
 // Constants
     const appID = "app";
-    const headingText = "Let's Get This Bread!";
 
 // DOM Elements
     let appContainer = document.getElementById(appID);

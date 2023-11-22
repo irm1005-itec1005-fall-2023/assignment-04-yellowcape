@@ -54,6 +54,11 @@ main {
   align-items: center;
 }
 
+.whole-page {
+  width: 75%;
+  background-color: #eee1ba;
+  border: solid 1px red;
+}
 
 /****** Screen reader text utility clsas *******/
 .sr-only {
