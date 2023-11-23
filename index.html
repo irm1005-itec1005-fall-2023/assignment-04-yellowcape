@@ -46,24 +46,25 @@
 
   <main>
     <div id="app"></div>
+    <section id="to-do-add-section">
+        <ol>
+          <li>Give me something off your plate!</li>
+        </ol>
+        
+        <form id="todo-form">
+          <label for="todo-input">What do you need to do? 
+            </label>
+          <input 
+          type="text" 
+          id="todo-input" 
+          placeholder="Dump it all here" 
+          required />
+            <button class="btn-primary" type="submit">Add</button>
 
-    <ol>
-      <li>Give me something off your plate!</li>
-    </ol>
-    
-    <form id="todo-form">
-      <label for="todo-input">What do you need to do? 
-        </label>
-      <input 
-      type="text" 
-      id="todo-input" 
-      placeholder="Dump it all here" 
-      required />
-        <button class="btn-primary" type="submit">Add</button>
+        </form>
+   </section>
 
-    </form>
-
-    <section>
+    <section id="written-out-list-section">
       <h3>All the stuff inside your head, off your plate, and written out here:</h3>
 
       <ul class="form-results" id="todo-inputted-items-list">
