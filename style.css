@@ -71,10 +71,11 @@ main {
   margin-left: 20%;
   margin-right: 20%;
   background-color: rgba(238, 225, 186, .8);
-  border: solid 1px red;
 }
 
-
+.to-do-add-section {
+  border: solid 4px green;
+}
 
 
 
