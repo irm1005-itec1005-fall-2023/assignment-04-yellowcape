@@ -75,6 +75,7 @@ main {
 
 .to-do-add-section {
   border: solid 4px green;
+  display: flex;
 }
 
 
