@@ -45,7 +45,7 @@ toDoForm.addEventListener("submit", handleSubmitForm)
           tempListItem.textContent = toDoItems[index];
 
           let tempButton = document.createElement("button");
-           tempButton.textContent = "Banish Me!";
+           tempButton.textContent = "X";
            tempButton.dataset.super = index;
 
             tempButton.addEventListener("click", function(event) {

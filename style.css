@@ -28,7 +28,7 @@
           
 
   /* MY COLOUR PALLETTE
-  #f0d7a7 - lightest colour creamy pretty
+  #fce8c3 - lightest colour creamy pretty
   #c37960 - medium most orangy brown
   #894e3f - darkest brown deep
   #eee1ba - more greyish verious of 1st colour
@@ -77,18 +77,61 @@ main {
   border: solid 4px red;
 }
 
+ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.form-results {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.button {
+  color: blue;
+}
+
 .to-do-add-section {
-  border: solid 4px green;
+  border: solid 0.5rem #894e3f;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+    .input-title {
+      background-color: #894e3f;
+        color: #fce8c3;
+      border: solid 0.5rem #894e3f;
+        border-radius: 1.5rem;
+      padding: 0.2rem;
+      text-align: center;
+      font-weight: bolder;
+      font-size: large;
+    }
+
+    .actual-input-box {
+      width: ;
+    }
+
+.written-out-list-section {
+  border: solid 0.5rem #894e3f;
+   border-radius: 2rem;
   margin-bottom: 2rem;
   padding: 1rem;
 }
 
-
-.written-out-list-section {
-  border: solid 4px green;
-  margin-bottom: 4rem;
-  padding: 1rem;
-}
+    .list-title {
+      background-color: #894e3f;
+        color: #fce8c3;
+      border: solid 0.5rem #894e3f;
+        border-radius: 1.5rem;
+      padding: 0.2rem;
+      text-align: center;
+      font-weight: bold;
+    }
 
 
 

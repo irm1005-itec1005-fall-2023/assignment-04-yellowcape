@@ -49,24 +49,24 @@
     <div class="to-do-add-section">
     <div id="app"></div>
         <ol>
-          <li>Give me something off your plate!</li>
+          <li class="input-title">Give me something off your plate!</li>
         </ol>
         
         <form id="todo-form">
-          <label for="todo-input">What do you need to do? 
-            </label>
+          <label for="todo-input">What do you need to do?</label>
           <input 
           type="text" 
           id="todo-input" 
           placeholder="Dump it all here" 
-          required />
+          required
+          class="actual-input-box" />
             <button class="btn-primary" type="submit">Add</button>
 
         </form>
     </div>
 
     <div class="written-out-list-section">
-      <h3>All the stuff inside your head, off your plate, and written out here:</h3>
+      <h3 class="list-title">All the stuff inside your head, off your plate, and written out here:</h3>
 
       <ul class="form-results" id="todo-inputted-items-list">
       </ul>
