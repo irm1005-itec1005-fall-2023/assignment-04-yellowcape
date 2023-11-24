@@ -112,9 +112,34 @@ ol {
       font-size: large;
     }
 
-    .actual-input-box {
-      width: ;
+    form, label, input {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
     }
+
+      .WDYNTD {
+        border: solid red 2px;
+        flex-grow: 1;
+      }
+
+      .dump-to-add {
+        border: solid green 3px;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .btn-primary {
+        background-color: #fce8c3;
+        border: solid 0.5rem #894e3f;
+          border-radius: 5rem;
+        color: #894e3f;
+        padding: 16px, 36px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
 
 .written-out-list-section {
   border: solid 0.5rem #894e3f;
