@@ -74,7 +74,6 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-  border: solid 4px red;
 }
 
 ol {
@@ -88,10 +87,6 @@ ol {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
-
-.button {
-  color: blue;
 }
 
 .to-do-add-section {
@@ -118,26 +113,50 @@ ol {
       flex-wrap: wrap;
     }
 
-      .WDYNTD {
-        border: solid red 2px;
-        flex-grow: 1;
+      label{
+        color: #894e3f;
+          text-align: center;
+          font-weight: bold;
+        border: solid 0.5rem #894e3f;
+          border-radius: 1.5rem;
+          margin-top: 0.2rem;
+          margin-bottom: 0.2rem;
+          padding: 0.8rem;
+        background-color:#fce8c3;
       }
 
       .dump-to-add {
-        border: solid green 3px;
         display: flex;
-        flex-grow: 1;
         flex-direction: row;
-        justify-content: space-between;
+      align-items: flex-start;
       }
+
+        input {
+          color: #fce8c3;
+          text-align: center;
+        border: solid 0.5rem #894e3f;
+          border-radius: 1.5rem;
+          margin-top: 0.2rem;
+          margin-bottom: 0.2rem;
+        background-color:rgba(238, 225, 186, .8);
+        flex-grow: 1;
+          align-self: stretch;
+        }
+
+/* ask neil for help with placeholder colour */
+
+          input ::placeholder {
+            color:rgba(238, 225, 186,);
+            opacity: 1;
+          }
 
       .btn-primary {
         background-color: #fce8c3;
         border: solid 0.5rem #894e3f;
-          border-radius: 5rem;
+          border-radius: 75%;
         color: #894e3f;
-        padding: 16px, 36px;
-        margin: 4px 2px;
+        padding: 0.8rem;
+        margin: 4px 4px;
         cursor: pointer;
       }
 
