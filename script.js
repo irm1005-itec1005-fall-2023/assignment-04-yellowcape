@@ -40,25 +40,37 @@ toDoForm.addEventListener("submit", handleSubmitForm)
         toDoList.innerHTML = "";
 
         for (let index = 0; index < toDoItems.length; index++) {
-          let tempListItem = document.createElement("li");
+        let listItemContainer = document.createElement("div");
 
+        listItemContainer.classList.add("list-item-container");
+
+          let tempListItem = document.createElement("li");
           tempListItem.textContent = toDoItems[index];
+
 
           let tempButton = document.createElement("button");
            tempButton.textContent = "X";
            tempButton.dataset.super = index;
 
+
+           //cite chat gpt below unless given alternative help from neil //
+          listItemContainer.classList.add("list-item-container")
+          tempListItem.classList.add("custom-list-item")
+          tempButton.classList.add("custom-button");
+
+
             tempButton.addEventListener("click", function(event) {
               console.log("You clicked me");
-
               console.log("You clicked on", event.target.dataset.super);
-
            toDoItems.splice(event.target.dataset.super, 1);
             renderData();
               });
 
-          tempListItem.appendChild(tempButton);
-          toDoList.appendChild(tempListItem);
+          // cite chat gpt here unless given alternative help from neil //
+          listItemContainer.appendChild(tempListItem);
+          listItemContainer.appendChild(tempButton);
+
+          toDoList.appendChild(listItemContainer);
 
         }
       }

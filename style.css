@@ -128,11 +128,11 @@ ol {
       .dump-to-add {
         display: flex;
         flex-direction: row;
-      align-items: flex-start;
+        align-items: center;
       }
 
         input {
-          color: #fce8c3;
+          color: #894e3f;
           text-align: center;
         border: solid 0.5rem #894e3f;
           border-radius: 1.5rem;
@@ -141,24 +141,37 @@ ol {
         background-color:rgba(238, 225, 186, .8);
         flex-grow: 1;
           align-self: stretch;
+          overflow-wrap: normal;
         }
 
-/* ask neil for help with placeholder colour */
-
+          /* ask neil for help with placeholder colour */
           input ::placeholder {
             color:rgba(238, 225, 186,);
             opacity: 1;
           }
 
+          input:hover {
+            background-color: #894e3f;
+            color: #fce8c3;
+          }
+
       .btn-primary {
+        display: flex;
         background-color: #fce8c3;
         border: solid 0.5rem #894e3f;
-          border-radius: 75%;
+          border-radius: 50%;
         color: #894e3f;
+          text-align: center;
         padding: 0.8rem;
         margin: 4px 4px;
+         max-height: 3rem;
         cursor: pointer;
       }
+
+       .btn-primary:hover {
+        background-color: #894e3f;
+        color: #fce8c3;
+       }
 
 .written-out-list-section {
   border: solid 0.5rem #894e3f;
@@ -177,12 +190,43 @@ ol {
       font-weight: bold;
     }
 
+   .list-item-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+   }
 
+    /* cite chat gpt here unless given alternative help from neil */
+    .custom-list-item {
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      color: #894e3f;
+          text-align: center;
+          font-weight: bold;
+        border: solid 0.5rem #894e3f;
+          border-radius: 1.5rem;
+          margin-top: 0.2rem;
+          margin-bottom: 0.2rem;
+          padding: 0.8rem;
+        background-color:#fce8c3;
+    }
 
+    .custom-button {
+      background-color: #fce8c3;
+        border: solid 0.5rem #894e3f;
+          border-radius: 75%;
+        color: #894e3f;
+        margin: 4px 4px;
+        cursor: pointer;
+        max-height: 3rem;
+      }
 
-
-
-
+      .custom-button:hover {
+        background-color: #894e3f;
+        color: #fce8c3;
+      }
 
 /****** Screen reader text utility clsas *******/
 .sr-only {
