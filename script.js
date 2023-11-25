@@ -83,7 +83,7 @@ toDoForm.addEventListener("submit", handleSubmitForm)
         completed: false,
       }
       toDoItems.push(todoItem);
-      counter++;
+      counter ++;
     } 
 
 
