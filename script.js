@@ -8,6 +8,7 @@
 //
 // Variables
 let toDoItems = [];
+let removedItems = [];
 let counter = 0;
 let toDoForm = document.getElementById("todo-form");
 let toDoList = document.getElementById("todo-inputted-items-list");
@@ -30,7 +31,7 @@ toDoForm.addEventListener("submit", handleSubmitForm)
 // Functions
     function handleSubmitForm(event) {
       event.preventDefault();
-      toDoItems.push(toDoInput.value);
+      addToDoItem(toDoInput.value);
       toDoForm.reset();
       renderData();
     }
@@ -45,12 +46,12 @@ toDoForm.addEventListener("submit", handleSubmitForm)
         listItemContainer.classList.add("list-item-container");
 
           let tempListItem = document.createElement("li");
-          tempListItem.textContent = toDoItems[index];
+          tempListItem.textContent = toDoItems[index].text;
 
 
           let tempButton = document.createElement("button");
            tempButton.textContent = "X";
-           tempButton.dataset.super = index;
+           tempButton.dataset.super = index.toString();
 
 
            //cite chat gpt below unless given alternative help from neil //
@@ -77,13 +78,15 @@ toDoForm.addEventListener("submit", handleSubmitForm)
 
 
     function addToDoItem(text) {
+      if (text !== "") {
       let todoItem = { 
         id : counter, 
         text : text, 
         completed: false,
       }
       toDoItems.push(todoItem);
-      counter ++;
+      counter++;
+     }
     } 
 
 
@@ -99,21 +102,36 @@ toDoForm.addEventListener("submit", handleSubmitForm)
       }
     }
 
-// OLD CODE BELOW
+    function markToDoItemAsCompleted(todoId) {
+      for (let index = 0; index < toDoItems.length; index++) {
+        if (toDoItems[index].id === todoId) {
+          toDoItems[index].completed = true;
+          removedItems.push(toDoItems[index]);
+          toDoItems.splice(index, 1);
+          renderRemovedItems();
+          break;
+        }
+      }
+    }
+          markToDoItemAsCompleted(1);
+          console.log(toDoItems);
+        
+          function renderRemovedItems() {
+            let removedItemsList = document.getElementById("completed-list");
+            removedItemsList.innerHTML = "";
 
-          function markToDoItemAsCompleted(todoId) {
-          for (let index = 0; index < toDoItems.length; index++) 
-            {
-              if (todDoItems[index].id === todoId) 
-              {
-                toDoItems[index].completed = true;
-                break;
-              }
+            for (let index = 0; index < removedItems.length; index++) {
+              let listItemContainer = document.createElement('div');
+              listItemContainer.classList.add('list-item-container');
+             
+              let tempListItem = document.createElement('li');
+              tempListItem.textContent = removedItems[index].text;
+              tempListItem.classList.add('custom-list-item');
+
+              listItemContainer.appendChild(tempListItem);
+              removedItemsList.appendChild(listItemContainer);
             }
           }
-          markToDoItemAsCompleted(1);
-          console.log(toDoItems[index]);
-        
 
         /*  function clearCompletedTasks() {
             for (let index = 0; index < toDoItems.length; index++) {
@@ -124,8 +142,6 @@ toDoForm.addEventListener("submit", handleSubmitForm)
           }
           */
 
-// END OF OLD CODE
-
 // Add a heading to the app container
 function inititialise() {
   // If anything is wrong with the app container then end
@@ -133,11 +149,7 @@ function inititialise() {
     console.error("Error: Could not find app contianer");
     return;
   }
-
-  // Create an h1 and add it to our app
-  const h1 = document.createElement("h1");
-  h1.innerText = headingText;
-  appContainer.appendChild(h1);
+  
 
   // Init complete
   console.log("App successfully initialised");

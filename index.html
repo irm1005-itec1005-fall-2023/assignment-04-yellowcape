@@ -41,19 +41,18 @@
   -->
 <div class="whole-page">
   <header>
-    <h2>Let's Get This Bread</h2>
+    <h2 class="calendar-link"><a href="#">Cross reference your tasks with your calendar!</a></h2>
   </header>
 
   <main>
     <div class="to-do-chunk">
     <div class="to-do-add-section">
     <div id="app"></div>
-        <ol>
-          <li class="input-title">Crust me, crossing off items feels better than a warm baguette.</li>
-        </ol>
+        <h1 class="input-title">Crust me, crossing off items feels better than a warm baguette.
+      </h1>
         
         <form id="todo-form">
-             <label for="todo-input">Whip up your to-do list like a master baker! Type your task and let the productivity rise to new heights. Ready, set, type away!</label>
+             <label for="todo-input">Whip up your to-do list like a master baker!<br>Type your task and let the productivity rise to new heights.<br> Ready, set, type away!</label>
 
           <div class="dump-to-add">
               <input 
@@ -72,6 +71,13 @@
       <h3 class="list-title">All the stuff inside your head, off your plate, and written out here:</h3>
 
       <ul class="form-results" id="todo-inputted-items-list">
+      </ul>
+    </div>
+
+    <div class="written-out-list-section">
+      <h3 class="list-title">Crossed off items.<br>Better than that warm baguette, right?</h3>
+
+      <ul class="removed-to-dos" id="completed-list">
       </ul>
 
     </div>
