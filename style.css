@@ -157,14 +157,15 @@ ol {
 
       .btn-primary {
         display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: #fce8c3;
         border: solid 0.5rem #894e3f;
-          border-radius: 50%;
+        border-radius: 50%; /* Use 50% for a circular button */
         color: #894e3f;
-          text-align: center;
         padding: 0.8rem;
         margin: 4px 4px;
-         max-height: 3rem;
+        max-height: 3rem;
         cursor: pointer;
       }
 

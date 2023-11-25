@@ -13,7 +13,7 @@ let toDoForm = document.getElementById("todo-form");
 let toDoList = document.getElementById("todo-inputted-items-list");
 let toDoInput = document.getElementById("todo-input");
 
-addToDoItem("Make Coffee");
+addToDoItem("");
 removeToDoItem(0);
 //
 
@@ -83,7 +83,7 @@ toDoForm.addEventListener("submit", handleSubmitForm)
         completed: false,
       }
       toDoItems.push(todoItem);
-      counter = counter + 1;
+      counter++;
     } 
 
 
@@ -101,7 +101,7 @@ toDoForm.addEventListener("submit", handleSubmitForm)
 
 // OLD CODE BELOW
 
-        /*  function markToDoItemAsCompleted(todoId) {
+          function markToDoItemAsCompleted(todoId) {
           for (let index = 0; index < toDoItems.length; index++) 
             {
               if (todDoItems[index].id === todoId) 
@@ -115,7 +115,7 @@ toDoForm.addEventListener("submit", handleSubmitForm)
           console.log(toDoItems[index]);
         
 
-          function clearCompletedTasks() {
+        /*  function clearCompletedTasks() {
             for (let index = 0; index < toDoItems.length; index++) {
               if (toDoItems[index].completed === true) {
                 toDoItems.splice(index, 1);
