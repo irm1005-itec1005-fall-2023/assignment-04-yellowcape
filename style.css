@@ -138,6 +138,22 @@ ol {
   margin-bottom: 2rem;
   padding: 1rem;
   border-radius: 2rem;
+} 
+
+.written-out-list-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: fit-content;
+  margin-bottom: 0;
+}
+
+.to-do-add-section, .written-out-list-section {
+  border: solid 0.5rem #894e3f;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  overflow: auto;
 }
 
     .input-title {
@@ -228,12 +244,12 @@ ol {
   padding: 1rem;
 } */
 
-.written-out-list-section {
+/* .written-out-list-section {
   border: solid 0.5rem #894e3f;
   border-radius: 2rem;
   margin-bottom: 2rem;
   padding: 1rem;
-}
+} */
 
     .list-title {
       background-color: #894e3f;
@@ -282,6 +298,34 @@ ol {
         background-color: #894e3f;
         color: #fce8c3;
       }
+  
+  .crossed-out-list-section {
+    border: solid 0.5rem #894e3f;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    overflow: auto;
+    }
+
+    .crossed-list-title {
+      background-color: #894e3f;
+        color: #fce8c3;
+      border: solid 0.5rem #894e3f;
+        border-radius: 1.5rem;
+      padding: 0.2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .removed-to-dos {
+      padding-left: 0;
+      align-items: center;
+      color: #9c634f;
+      text-decoration: line-through;
+      text-decoration-thickness: 0.15rem;
+      text-decoration-color: #894e3f;
+    }
 
 /****** Screen reader text utility clsas *******/
 .sr-only {
