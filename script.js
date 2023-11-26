@@ -53,21 +53,23 @@ toDoForm.addEventListener("submit", handleSubmitForm)
            tempButton.textContent = "X";
            tempButton.dataset.super = index.toString();
 
-
-           //cite chat gpt below unless given alternative help from neil //
           listItemContainer.classList.add("list-item-container")
           tempListItem.classList.add("custom-list-item")
           tempButton.classList.add("custom-button");
 
+          tempButton.addEventListener("click", function(event) {
+            console.log("You clicked me");
+            console.log("You clicked on", event.target.dataset.super);
+            let indexToDelete = parseInt(event.target.dataset.super, 10);
 
-            tempButton.addEventListener("click", function(event) {
-              console.log("You clicked me");
-              console.log("You clicked on", event.target.dataset.super);
-           toDoItems.splice(event.target.dataset.super, 1);
+            removedItems.push(toDoItems[indexToDelete]);
+
+            toDoItems.splice(indexToDelete, 1);
             renderData();
-              });
 
-          // cite chat gpt here unless given alternative help from neil //
+            renderRemovedItems();
+          });
+
           listItemContainer.appendChild(tempListItem);
           listItemContainer.appendChild(tempButton);
 
@@ -159,3 +161,5 @@ function inititialise() {
 // Inits & Event Listeners
 //
 inititialise();
+
+// DON'T FOGET TO CITE GITHUB CO-PILOT!!
