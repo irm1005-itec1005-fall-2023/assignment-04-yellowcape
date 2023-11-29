@@ -81,7 +81,7 @@ body {
     background-size: auto;
 }
 
-  @media screen and (max-width: 600px) {
+  @media screen (max-width: 600px) {
     body {
       background-size: 200px 200px;
     }
@@ -102,21 +102,19 @@ main {
   background-color: rgba(238, 225, 186, .6);
 }
 
-    @media screen and (max-width: 600px) {
+    @media screen (max-width: 600px) {
       body {
         background-size: auto 50%;
         background-repeat: repeat;
       }
-
-      .whole-page {
-        width: 90vw;
-      }
     }
+
 
 .to-do-chunk {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
+  max-width: 100%;
 }
 
 ol {
@@ -148,7 +146,8 @@ ol {
   margin-bottom: 0;
 }
 
-.to-do-add-section, .written-out-list-section {
+.to-do-add-section,
+.written-out-list-section {
   border: solid 0.5rem #894e3f;
   margin-bottom: 1rem;
   padding: 1rem;
@@ -156,83 +155,88 @@ ol {
   overflow: auto;
 }
 
-    .input-title {
-      background-color: #894e3f;
-        color: #fce8c3;
-      border: solid 0.5rem #894e3f;
-        border-radius: 1.5rem;
-      padding: 0.2rem;
-      text-align: center;
-      font-weight: bolder;
-      font-size: xx-large;
-    }
+.input-title {
+  background-color: #894e3f;
+  color: #fce8c3;
+  border: solid 0.5rem #894e3f;
+  border-radius: 1.5rem;
+  padding: 0.2rem;
+  text-align: center;
+  font-weight: bolder;
+  font-size: xx-large;
+}
 
-    form, label, input {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-    }
+form,
+label,
+input {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
 
-      label{
-        color: #894e3f;
-          text-align: center;
-          font-weight: bold;
-        border: solid 0.5rem #894e3f;
-          border-radius: 1.5rem;
-          margin-top: 0.2rem;
-          margin-bottom: 0.2rem;
-          padding: 0.8rem;
-        background-color:#fce8c3;
-      }
+label {
+  color: #894e3f;
+  text-align: center;
+  font-weight: bold;
+  border: solid 0.5rem #894e3f;
+  border-radius: 1.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  padding: 0.8rem;
+  background-color: #fce8c3;
+}
 
-      .dump-to-add {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
+.dump-to-add {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 
-        input {
-          color: #894e3f;
-          text-align: center;
-        border: solid 0.5rem #894e3f;
-          border-radius: 1.5rem;
-          margin-top: 0.2rem;
-          margin-bottom: 0.2rem;
-        background-color:rgba(238, 225, 186, .8);
-        flex-grow: 1;
-          align-self: stretch;
-          overflow-wrap: normal;
-        }
+input {
+  color: #894e3f;
+  text-align: center;
+  border: solid 0.5rem #894e3f;
+  border-radius: 1.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  background-color: rgba(238, 225, 186, 0.8);
+  flex-grow: 1;
+  align-self: stretch;
+  max-width: 100%;
+}
 
-          /* ask neil for help with placeholder colour */
-          input ::placeholder {
-            color:rgba(238, 225, 186,);
-            opacity: 1;
-          }
+input::placeholder {
+  color: rgba(238, 225, 186);
+  opacity: 1;
+}
 
-          input:hover {
-            background-color: #894e3f;
-            color: #fce8c3;
-          }
+input:hover {
+  background-color: #894e3f;
+  color: #fce8c3;
+}
 
-      .btn-primary {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #fce8c3;
-        border: solid 0.5rem #894e3f;
-        border-radius: 50%; /* Use 50% for a circular button */
-        color: #894e3f;
-        padding: 0.8rem;
-        margin: 4px 4px;
-        max-height: 3rem;
-        cursor: pointer;
-      }
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fce8c3;
+  border: solid 0.5rem #894e3f;
+  border-radius: 50%;
+  color: #894e3f;
+  padding: 0.8rem;
+  margin: 4px 4px;
+  max-height: 20%;
+  max-width: 25%;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
 
-       .btn-primary:hover {
-        background-color: #894e3f;
-        color: #fce8c3;
-       }
+.btn-primary:hover {
+  background-color: #894e3f;
+  color: #fce8c3;
+}
 
 /*.written-out-list-section {
   display: flex;
@@ -268,13 +272,14 @@ ol {
     align-items: center;
    }
 
-    /* cite chat gpt here unless given alternative help from neil */
     .custom-list-item {
       display: flex;
       flex-wrap: wrap;
+      text-wrap: wrap;
       flex-grow: 1;
       color: #894e3f;
-          text-align: center;
+          text-align: left;
+          flex-direction: column;
           font-weight: bold;
         border: solid 0.5rem #894e3f;
           border-radius: 1.5rem;
@@ -282,6 +287,7 @@ ol {
           margin-bottom: 0.2rem;
           padding: 0.8rem;
         background-color:#fce8c3;
+      max-width: 80%;
     }
 
     .custom-button {

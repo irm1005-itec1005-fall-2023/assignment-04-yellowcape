@@ -53,7 +53,6 @@ toDoForm.addEventListener("submit", handleSubmitForm)
            tempButton.textContent = "X";
            tempButton.dataset.super = index.toString();
 
-          listItemContainer.classList.add("list-item-container")
           tempListItem.classList.add("custom-list-item")
           tempButton.classList.add("custom-button");
 
@@ -74,7 +73,6 @@ toDoForm.addEventListener("submit", handleSubmitForm)
           listItemContainer.appendChild(tempButton);
 
           toDoList.appendChild(listItemContainer);
-
         }
       }
 
@@ -84,7 +82,7 @@ toDoForm.addEventListener("submit", handleSubmitForm)
       let todoItem = { 
         id : counter, 
         text : text, 
-        completed: false,
+        completed : false,
       }
       toDoItems.push(todoItem);
       counter++;
