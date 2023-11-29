@@ -304,7 +304,7 @@ input:hover {
     flex-grow: 0;
     background-color: #fce8c3;
     border: solid 0.5rem #894e3f;
-    border-radius: 75%;
+    border-radius: 3rem;
     color: #894e3f;
     margin: 4px 4px;
     cursor: pointer;

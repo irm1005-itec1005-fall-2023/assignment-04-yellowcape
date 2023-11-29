@@ -142,6 +142,7 @@ toDoForm.addEventListener("submit", handleSubmitForm)
           }
           */
 
+
 // Add a heading to the app container
 function inititialise() {
   // If anything is wrong with the app container then end
@@ -150,6 +151,16 @@ function inititialise() {
     return;
   }
   
+  document.getElementById('clear-completed').addEventListener('click', function() {
+    // Get all the completed tasks
+    var completedTasks = document.getElementsByClassName('removed-to-dos');
+  
+    // Loop through the completed tasks in reverse order (to avoid issues with elements being removed)
+    for (var i = completedTasks.length - 1; i >= 0; i--) {
+      // Remove the task from the DOM
+      completedTasks[i].remove();
+    }
+  });
 
   // Init complete
   console.log("App successfully initialised");
