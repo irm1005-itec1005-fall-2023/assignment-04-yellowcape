@@ -189,9 +189,16 @@ label {
 
 .dump-to-add {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+@media (min-width: 500px) {
+  .dump-to-add {
+    flex-direction: row;
+  }
 }
 
 input {
@@ -272,33 +279,38 @@ input:hover {
     align-items: center;
    }
 
-    .custom-list-item {
-      display: flex;
+   .custom-list-item {
+    display: flex;
       flex-wrap: wrap;
-      text-wrap: wrap;
+      flex-direction: column;
       flex-grow: 1;
-      color: #894e3f;
-          text-align: left;
-          flex-direction: column;
-          font-weight: bold;
-        border: solid 0.5rem #894e3f;
-          border-radius: 1.5rem;
-          margin-top: 0.2rem;
-          margin-bottom: 0.2rem;
-          padding: 0.8rem;
-        background-color:#fce8c3;
-      max-width: 80%;
-    }
+      justify-content: center; /* Add this line */
+      align-items: center; /* Add this line */
+    color: #894e3f;
+      text-align: center; /* Add this line */
+      font-weight: bold;
+    border: solid 0.5rem #894e3f;
+      border-radius: 1.5rem;
+      margin-top: 0.2rem;
+      margin-bottom: 0.2rem;
+      padding: 0.8rem;
+    background-color:#fce8c3;
+    width: auto; /* Add this line */
+      overflow: auto;
+      word-break: break-word;
+  }
 
-    .custom-button {
-      background-color: #fce8c3;
-        border: solid 0.5rem #894e3f;
-          border-radius: 75%;
-        color: #894e3f;
-        margin: 4px 4px;
-        cursor: pointer;
-        max-height: 3rem;
-      }
+  .custom-button {
+    flex-grow: 0;
+    background-color: #fce8c3;
+    border: solid 0.5rem #894e3f;
+    border-radius: 75%;
+    color: #894e3f;
+    margin: 4px 4px;
+    cursor: pointer;
+    max-height: 3rem;
+    width: auto; /* Add this line */
+  }
 
       .custom-button:hover {
         background-color: #894e3f;
