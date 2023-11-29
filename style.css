@@ -201,7 +201,7 @@ label {
   }
 }
 
-input {
+input[type="text"] {
   color: #894e3f;
   text-align: center;
   border: solid 0.5rem #894e3f;
@@ -214,12 +214,12 @@ input {
   max-width: 100%;
 }
 
-input::placeholder {
+input[type="text"]::placeholder {
   color: rgba(238, 225, 186);
   opacity: 1;
 }
 
-input:hover {
+input[type="text"]:hover {
   background-color: #894e3f;
   color: #fce8c3;
 }
