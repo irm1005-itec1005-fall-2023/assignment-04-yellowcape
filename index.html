@@ -2,16 +2,12 @@
 <html lang="en-ca">
 
 <head>
-  <!-- Set the page title -->
   <title>To Do</title>
 
-  <!-- Set the charset we're using to UTF-8 -->
   <meta charset="utf-8" />
 
-  <!-- Set the screens default zoom / scale to 1 -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Specifies the document mode for Internet Explorer -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
   <!-- Set the CSS Reset File -->
@@ -39,12 +35,12 @@
     - Have you conducted a code review and left a GitHub Issue on your team member's repo?
 
   -->
-<div class="whole-page">
   <header>
     <h2 class="calendar-link"><a href="#">Cross reference your tasks with your calendar!</a></h2>
   </header>
 
   <main>
+    <div class="whole-page">
     <div class="to-do-chunk">
     <div class="to-do-add-section">
     <div id="app"></div>
@@ -62,7 +58,7 @@
               required />
             
               <button class="btn-primary" type="submit">+</button>
-
+              </div>
         </form>
         </div>
     </div>
@@ -82,14 +78,14 @@
 
     </div>
 
-    <button id="clear-completed" class="custom-button">Clear Completed Tasks</button>    
-  </div>
-
+    <button id="clear-completed" class="custom-button">Clear Completed Tasks
+     </button>    
+    </div>
   </main>
 
   <!-- Add JavaScript File -->
   <script src="./script.js"></script>
 
-  </div>
+  
 </body>
 </html>

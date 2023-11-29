@@ -1,12 +1,3 @@
-/* Assignment 04: Finishing a Todo List App
- *
- * 
- *
- */
-
-
-//
-// Variables
 let toDoItems = [];
 let removedItems = [];
 let counter = 0;
@@ -16,19 +7,13 @@ let toDoInput = document.getElementById("todo-input");
 
 addToDoItem("");
 removeToDoItem(0);
-//
 
-//Handlding the form submission
 toDoForm.addEventListener("submit", handleSubmitForm)
 
-// Constants
     const appID = "app";
 
-// DOM Elements
     let appContainer = document.getElementById(appID);
 
-//
-// Functions
     function handleSubmitForm(event) {
       event.preventDefault();
       addToDoItem(toDoInput.value);
@@ -91,7 +76,6 @@ toDoForm.addEventListener("submit", handleSubmitForm)
 
 
     function removeToDoItem(todoId) {
-      // Implement the logic to add a task here
       for (let index = 0; index < toDoItems.length; index++) 
       {
         if (toDoItems[index].id === todoId) 
@@ -133,42 +117,24 @@ toDoForm.addEventListener("submit", handleSubmitForm)
             }
           }
 
-        /*  function clearCompletedTasks() {
-            for (let index = 0; index < toDoItems.length; index++) {
-              if (toDoItems[index].completed === true) {
-                toDoItems.splice(index, 1);
-              }
-            }
-          }
-          */
-
-
-// Add a heading to the app container
 function inititialise() {
-  // If anything is wrong with the app container then end
   if (!appContainer) {
     console.error("Error: Could not find app contianer");
     return;
   }
   
   document.getElementById('clear-completed').addEventListener('click', function() {
-    // Get all the completed tasks
     var completedTasks = document.getElementsByClassName('removed-to-dos');
   
-    // Loop through the completed tasks in reverse order (to avoid issues with elements being removed)
     for (var i = completedTasks.length - 1; i >= 0; i--) {
-      // Remove the task from the DOM
       completedTasks[i].remove();
+      removedItems.splice(i, 1);
     }
   });
 
-  // Init complete
   console.log("App successfully initialised");
 }
 
-//
-// Inits & Event Listeners
-//
 inititialise();
 
-// DON'T FOGET TO CITE GITHUB CO-PILOT!!
+// !! Written with assistance from GitHub Co-Pilot !!
