@@ -286,7 +286,13 @@
         border: solid 0.5rem #894e3f;
         border-radius: 3rem;
         color: #894e3f;
+        cursor: pointer;      
       }
+  
+          .custom-button-second:hover {
+            background-color: #894e3f;
+            color: #fce8c3;
+          }
 
 
       
