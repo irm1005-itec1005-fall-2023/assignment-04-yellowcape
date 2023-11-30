@@ -2,16 +2,12 @@
 <html lang="en-ca">
 
 <head>
-  <!-- Set the page title -->
-  <title>Assignment 04 - Finishing a Todo List App</title>
+  <title>To Do</title>
 
-  <!-- Set the charset we're using to UTF-8 -->
   <meta charset="utf-8" />
 
-  <!-- Set the screens default zoom / scale to 1 -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Specifies the document mode for Internet Explorer -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
   <!-- Set the CSS Reset File -->
@@ -21,7 +17,7 @@
   <link rel="stylesheet" href="./style.css" />
 
   <!-- Set the Favicon  -->
-  <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
+  <link rel="icon" href="./images/favicon/croissant.svg" type="image/svg+xml" />
 </head>
 <body>
 
@@ -39,13 +35,57 @@
     - Have you conducted a code review and left a GitHub Issue on your team member's repo?
 
   -->
+  <header>
+    <h2 class="calendar-link"><a href="#">Cross reference your tasks with your calendar!</a></h2>
+  </header>
 
   <main>
+    <div class="whole-page">
+    <div class="to-do-chunk">
+    <div class="to-do-add-section">
     <div id="app"></div>
+        <h1 class="input-title">Crust me, crossing off items feels better than a warm baguette.
+      </h1>
+        
+        <form id="todo-form">
+             <label for="todo-input">Whip up your to-do list like a master baker!<br>Type your task and let the productivity rise to new heights.<br> Ready, set, type away!</label>
+
+          <div class="dump-to-add">
+              <input 
+              type="text" 
+              id="todo-input" 
+              placeholder="Type tasks here, and rise to the occasion!" 
+              required />
+            
+              <button class="btn-primary" type="submit">+</button>
+              </div>
+        </form>
+        </div>
+    </div>
+
+    <div class="written-out-list-section">
+      <h3 class="list-title">All the stuff inside your head, off your plate, and written out here:</h3>
+
+      <ul class="form-results" id="todo-inputted-items-list">
+      </ul>
+    </div>
+
+    <div class="crossed-out-list-section">
+      <h3 class="crossed-list-title">Crossed off items.<br>Better than that warm baguette, right?</h3>
+
+      <ul class="removed-to-dos" id="completed-list">
+      </ul>
+
+    </div>
+
+    <button id="clear-completed" class="custom-button-second">Clear Completed Tasks
+     </button>    
+    </div>
   </main>
 
   <!-- Add JavaScript File -->
   <script src="./script.js"></script>
 
+  
 </body>
 </html>
